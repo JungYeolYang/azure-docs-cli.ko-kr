@@ -105,7 +105,7 @@ az vm show -g QueryDemo -n TestVM --query '[name, osProfile.adminUsername, osPro
 
 ## <a name="get-a-single-value"></a>단일 값 가져오기
 
-일반적으로 Azure 리소스 ID, 리소스 이름, 사용자 이름 또는 암호와 같은 CLI 명령에서는 _하나_의 값만 가져와야 합니다. 이 경우 값을 로컬 환경 변수에 저장하려는 경우도 많습니다. 단일 속성을 가져오려면 먼저 쿼리에서 하나의 속성만 가져오도록 합니다. 관리 사용자 이름만 가져오도록 마지막 예제를 다음과 같이 수정합니다.
+일반적으로 Azure 리소스 ID, 리소스 이름, 사용자 이름 또는 암호와 같은 CLI 명령에서는 _하나_ 의 값만 가져와야 합니다. 이 경우 값을 로컬 환경 변수에 저장하려는 경우도 많습니다. 단일 속성을 가져오려면 먼저 쿼리에서 하나의 속성만 가져오도록 합니다. 관리 사용자 이름만 가져오도록 마지막 예제를 다음과 같이 수정합니다.
 
 ```azurecli-interactive
 az vm show -g QueryDemo -n TestVM --query 'osProfile.adminUsername' -o json
@@ -229,7 +229,7 @@ az vm show -g QueryDemo -n TestVM --query '{VMName:name, admin:osProfile.adminUs
 
 ## <a name="filter-arrays"></a>배열 필터링
 
-배열에서 데이터를 가져오는 데 사용되는 다른 작업은 _필터링_입니다. 필터링은 `[?...]` JMESPath 연산자를 사용하여 이루어집니다.
+배열에서 데이터를 가져오는 데 사용되는 다른 작업은 _필터링_ 입니다. 필터링은 `[?...]` JMESPath 연산자를 사용하여 이루어집니다.
 이 연산자는 내용에 맞게 조건자를 사용합니다. 조건자는 `true` 또는 `false`로 평가할 수 있는 문입니다. 조건자가 `true`로 평가되는 표현식은 출력에 포함됩니다.
 
 JMESPath는 표준 비교 및 논리 연산자를 제공합니다. `<`, `<=`, `>`, `>=`, `==`, `!=`을 포함합니다.
